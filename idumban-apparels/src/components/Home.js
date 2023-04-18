@@ -44,36 +44,75 @@ export default function Home(){
                 </div>
             </div>
             <div className="section3-container">
-                <div className="carousel-container">
-                    <div id="home-carousel" className="carousel slide">
-                        <div className="carousel-indicators">
-                            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        </div>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src="/images/homeCarousel/sewing.jpg" className="d-block w-100" alt="sewing section"/>
-                            </div>
-                            <div className="carousel-item">
-                                <img src="/images/homeCarousel/cutting.jpg" className="d-block w-100" alt="cutting section"/>
-                            </div>
-                            <div className="carousel-item">
-                                <img src="/images/homeCarousel/checking.jpg" className="d-block w-100" alt="checking section"/>
-                            </div>
-                            <div className="carousel-item">
-                                <img src="/images/homeCarousel/packing.jpg" className="d-block w-100" alt="packing section"/>
+                <div id="home-carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active" data-bs-interval="4000">
+                            <img src="/images/homeCarousel/sewing.jpg" className="d-block w-100" alt="sewing section"/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5>Sewing</h5>
+
                             </div>
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#home-carousel" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
+                        <div className="carousel-item" data-bs-interval="4000">
+                            <img src="/images/homeCarousel/cutting.jpg" className="d-block w-100" alt="cutting section"/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5>Cutting</h5>
+
+                            </div>
+                        </div>
+                        <div className="carousel-item" data-bs-interval="3000">
+                            <img src="/images/homeCarousel/checking.jpg" className="d-block w-100" alt="checking section"/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5>Checking</h5>
+
+                            </div>
+                        </div>
+                        <div className="carousel-item" data-bs-interval="4000">
+                            <img src="/images/homeCarousel/packing.jpg" className="d-block w-100" alt="packing section"/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5>Packing</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#home-carousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#home-carousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div className="section4-container">
+                <div className="content-container w-100">
+                    <div className="card mb-3 ">
+                        <img src="images/cards/cone.jpg" className="card-img-top" alt="..."/>
+                        <div className="card-body p-3 py-5">
+                            <h3 className="card-title">Quality Raw Materials</h3>
+                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div className="card mb-3">
+                        <img src="images/cards/machine.jpg" className="card-img-top" alt="..."/>
+                        <div className="card-body p-3 py-5">
+                            <h3 className="card-title">Skilled Workforce</h3>
+                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div className="card mb-3">
+                        <img src="images/cards/packing.jpg" className="card-img-top" alt="..."/>
+                        <div className="card-body p-3 py-5">
+                            <h3 className="card-title">Flexible Production</h3>
+                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
