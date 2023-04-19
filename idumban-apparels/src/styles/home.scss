@@ -151,6 +151,7 @@
             text-align: center;
             gap: 10px;
             color: #444444;
+            font-family: 'Poppins', sans-serif;
             h1{
                 margin-bottom: 50px;
                 font-family: 'Montserrat', sans-serif;
@@ -160,14 +161,23 @@
                     max-width: 750px;
                 }
             }
-            h2{
-                font-family: 'Poppins', serif;
+            h2{ 
                 font-size: 2.8rem;
                 font-weight: 400;
             }
             h4{
-                font-family: 'Poppins', sans-serif;
                 font-size: 2.2rem;
+            }
+            @media screen and (max-width: 768px) {
+                h1{
+                    font-size: 3.5rem;
+                }
+                h2{
+                    font-size: 2rem;
+                }
+                h4{
+                    font-size: 1.8rem;
+                }  
             }
         }
     }
@@ -182,7 +192,6 @@
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            flex-wrap: wrap;
             align-items: center;
 
             .text-container{
@@ -204,6 +213,10 @@
                 @media screen and (max-width: 768px) {
                     h2{
                         max-width: 600px;
+                        font-size: 2rem;
+                    }
+                    h4{
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -223,8 +236,6 @@
                     background-color: #666666;
                     position: relative;
 
-
-
                     img{
                         position: absolute;
                         top: calc(50% + 10px);
@@ -234,7 +245,7 @@
                         height: 100px;
                         z-index: 3;
                     }
-                    div{
+                    .effect-div{
                         position: absolute;
                         top: 10px;
                         right: 10px;
@@ -246,10 +257,10 @@
                         z-index: 2;
                     }
                 }
-
+                
             }
            
-            @media screen and (max-width: 1350px) {
+            @media screen and (max-width: 1380px) {
                 flex-direction: column;
                 gap: 60px;
             }

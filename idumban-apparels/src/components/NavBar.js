@@ -1,4 +1,5 @@
 import React , {useState, useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import "../styles/home.scss";
 
 export default function NavBar() {
@@ -12,6 +13,8 @@ export default function NavBar() {
         });
 
     }, []);
+    const location = useLocation();
+    console.log(location.pathname);
 
     const navStyles = {
         backgroundColor: (scrollPosition > 100 ? "rgba(68, 68, 68, 0.8)" : "rgba(68, 68, 68, 1)"),
