@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 
 
 
@@ -9,22 +9,27 @@ export default function Home(){
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
     }
+
+    useEffect(() => {
+        function handleHover() {}
+    }, [])
+
     return (
         <div className="home-container navbar-offset">
-            <div className="first-section max-width" style={section1Styles}>
+            <div className="first-section w-100" style={section1Styles}>
                 <div className="text-container">
                     <h1>IDUMBAN APPARELS</h1>
                     <h2>When fashion meets quality</h2>
                     <h4>Your style comes to life</h4>
                 </div>
             </div>
-            <div className="second-section max-width">
-                <div className="content-container max-width">
+            <div className="second-section w-100">
+                <div className="content-container w-100">
                     <div className="text-container">
                         <h2>Quality manufacturer of Garments</h2>
                         <h4>
                             With a commitment to excellence and investment in cutting-edge technology, 
-                            we deliver top-tier products that meet the most demanding industry standards
+                            we deliver top-tier products that meet the most demanding industry standards.
                         </h4>
                     </div>
                     <div className="icons-container">
@@ -93,25 +98,31 @@ export default function Home(){
             </div>
             <div className="section4-container">
                 <div className="content-container w-100">
-                    <div className="card mb-3 ">
+                    <div className="card mb-3">
                         <img src="images/cards/cone.jpg" className="card-img-top" alt="..."/>
                         <div className="card-body p-3 py-5">
                             <h3 className="card-title">Quality Raw Materials</h3>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p className="card-text"> 
+                                Our commitment to sourcing the finest raw materials and subjecting them to rigourous quality tests guarantees our clients only receive best service in industry.
+                            </p>
                         </div>
                     </div>
                     <div className="card mb-3">
                         <img src="images/cards/machine.jpg" className="card-img-top" alt="..."/>
                         <div className="card-body p-3 py-5">
-                            <h3 className="card-title">Skilled Workforce</h3>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 className="card-title">Talented Workforce</h3>
+                            <p className="card-text">
+                                Talented workforce working on your orders means that you can rest easy and be guaranteed to get your needs met to the smallest details.
+                            </p>
                         </div>
                     </div>
                     <div className="card mb-3">
                         <img src="images/cards/packing.jpg" className="card-img-top" alt="..."/>
                         <div className="card-body p-3 py-5">
                             <h3 className="card-title">Flexible Production</h3>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p className="card-text">
+                                We have flexible production capabilities to meet your diverse and specific needs, whether it be for high-volume runs or custom projects.
+                            </p>
                         </div>
                     </div>
                 </div>
