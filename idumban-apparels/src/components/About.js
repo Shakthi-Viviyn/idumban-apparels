@@ -40,8 +40,8 @@ export default function About() {
             <div className="section3-container">
                 <div className="content-container w-100">
                     <div className="text-container">
-                        <h3>Managing Director</h3>
-                        <h5>R.Mahesh</h5>
+                        <h3>R.Mahesh</h3>
+                        <h5>Managing Director</h5>
                         <p>
                             We are proud to have the founder and proprietor of our company serving as our Managing Director. With over 28 years of experience in the garment manufacturing industry, his knowledge and expertise have been invaluable in establishing and growing our company. His unwavering dedication to our success is reflected in his hands-on approach and attention to detail. Under his visionary leadership, we are confident in our ability to continue to provide high-quality products to our customers.
                         </p>

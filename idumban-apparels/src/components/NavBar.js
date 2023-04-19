@@ -5,8 +5,6 @@ export default function NavBar() {
 
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    console.log(scrollPosition);
-
     useEffect(() => {
         window.addEventListener("scroll", function(){
             const currentPosition = window.pageYOffset;
@@ -16,8 +14,8 @@ export default function NavBar() {
     }, []);
 
     const navStyles = {
-        opacity: (scrollPosition > 100 ? "0.8" : "1"),
-        transition: "opacity 0.5s"
+        backgroundColor: (scrollPosition > 100 ? "rgba(68, 68, 68, 0.8)" : "rgba(68, 68, 68, 1)"),
+        transition: "background-color 0.5s"
     }
 
     return (
@@ -44,10 +42,10 @@ export default function NavBar() {
                             <a className="nav-link" href="/about">About us</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/contact">Contact</a>
+                            <a className="nav-link" href="#">Gallery</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Gallery</a>
+                            <a className="nav-link" href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
