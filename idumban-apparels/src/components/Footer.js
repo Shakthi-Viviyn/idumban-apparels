@@ -1,6 +1,22 @@
-import React from 'react';
+import React , {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+
+    const [email, setEmail] = useState("");
+
+    const navigate = useNavigate();
+
+    const handleInput = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handleRedirect = () => {
+        setEmail("");
+        const params = {email: email};
+        navigate("/contact", {state: params});
+    }
+
     
     return (
         <div className="footer">
@@ -19,8 +35,8 @@ export default function Footer() {
                 <p className="address m-0">15, Ramraj Nagar, 80 Feet Road, PO, Gandhinagar, Tiruppur, Tamil Nadu 641603, India</p>
             </div>
             <div className="contact-box">
-                <input type="email" className="email" placeholder="Email"/>
-                <input type="submit" className='contact-btn' value="Contact"/>
+                <input type="email" onChange={handleInput} className="email" placeholder="Email"/>
+                <input type="submit" onClick={handleRedirect} className='contact-btn' value="Contact"/>
             </div>
         </div>
     )

@@ -26,22 +26,45 @@
             margin-left: 15px;
         }
     }
-    .nav-link{
-        font-size: 20px;
-    }
-    .navbar-toggler .navbar-toggler-icon {
-        color: white;
-    }
 
-    @media screen and (min-width: 768px) {
+    .offcanvas {
+        background-color: #444444;
+        color: white;
+
+        .nav-link{
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 991px){
+            .nav-item{
+                border-top: solid 1px #eeeeee;
+                text-align: center;
+                padding: 5px;
+            }
+            .nav-item:nth-child(3){
+                border-bottom: solid 1px #eeeeee;
+                margin-bottom: 40px;
+            } 
+        } 
+        .alignment{
+            margin: 0 auto;
+            @include flex-row-center;
+            gap: 10px;
+            img{
+                width: 20px;
+            }
+            @media screen and (min-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    
+    @media screen and (min-width: 992px) {
         li {
             margin-right: 30px;
         } 
     }
-    .offcanvas{
-        background-color: #444444;
-        color: white;
-    }
+
 }
 
 .navbar-offset{
@@ -197,26 +220,27 @@
             .text-container{
                 text-align: center;
                 color: #444444;
-                text-align: center;
+                @include flex-column-center;
 
                 h2{
-                    font-size: 3rem;
+                    font-size: 2.8rem;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 500;
                 }
                 h4{
                     margin-top: 50px;
+                    text-align: center;
                     font-family: sans-serif;
                     max-width: 800px;
-                    font-weight: 300;
+                    font-weight: 400;
                 }
                 @media screen and (max-width: 768px) {
                     h2{
-                        max-width: 600px;
                         font-size: 2rem;
                     }
                     h4{
                         font-size: 1.2rem;
+                        max-width: 600px;
                     }
                 }
             }
@@ -231,8 +255,8 @@
 
                 .icon {
                     @include flex-column-center;
-                    height: 200px;
-                    width: 200px;
+                    height: 150px;
+                    width: 150px;
                     background-color: #666666;
                     position: relative;
 
@@ -241,8 +265,8 @@
                         top: calc(50% + 10px);
                         left: calc(50% - 10px);
                         transform: translate(-50%, -50%);
-                        width: 100px;
-                        height: 100px;
+                        width: 75px;
+                        height: 75px;
                         z-index: 3;
                     }
                     .effect-div{
@@ -256,12 +280,23 @@
                         border: 3px solid #666666;
                         z-index: 2;
                     }
+                    @media screen and (max-width: 768px) {
+                        height: 100px;
+                        width: 100px;
+                        img{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    max-width: 300px;
                 }
                 
             }
            
             @media screen and (max-width: 1380px) {
-                flex-direction: column;
+                @include flex-column-center;
                 gap: 60px;
             }
         }
@@ -321,6 +356,9 @@
                 border: none;
 
                 overflow: hidden;
+                .card-body{
+                    padding: 30px 20px;
+                }
 
                 img{
                     border-top-left-radius: 10px;
@@ -331,7 +369,14 @@
                 p {
                     margin-top: 30px;
                     font-family: sans-serif;
+                    text-align: justify;
                     font-size: 1.2rem;
+                }
+                @media screen and (max-width: 768px) {
+                    width: 300px;
+                    p{
+                        font-size: 1rem;
+                    }
                 }
             }
             .card:hover img{
@@ -404,9 +449,11 @@
                 font-size: 1.4rem;
                 text-align: justify;
             }
-            @media screen and (max-width: 900px) {
+            @media screen and (max-width: 800px) {
                padding: 40px 0;
-                
+                p{
+                    font-size: 1.15rem;
+                }
             }
         }
     }
@@ -444,12 +491,29 @@
                     margin-top: 25px;
                     text-align: justify;
                 }
+                @media screen and (max-width: 768px) {
+                    h3{
+                        font-size: 1.8rem;
+                    }
+                    h5{
+                        font-size: 1.4rem;
+                    }
+                    p{
+                        font-size: 1.15rem;
+                    }
+                    
+                }
+                
             }
 
             img{
                 height: 300px;
                 border-radius: 50%;
                 border: 2px solid #666666;
+
+                @media screen and (max-width: 768px) {
+                    height: 200px;
+                }
             }
         }
     }
@@ -463,6 +527,9 @@
         gap: 70px;
         padding: 40px;
 
+        @media screen and (max-width: 800px) {
+            gap:30px;
+        }
         .header-container{
             text-align: center;
 
@@ -514,9 +581,9 @@
             @include flex-column-center;
             min-height: 50vh;
             iframe{
-                width: 75%;
+                width: 100%;
                 height: 500px;
-                margin-bottom: 30px;
+                max-width: 700px;
                 @media screen and (max-width: 768px) {
                     height: 300px;
                 }
@@ -525,14 +592,12 @@
         
         form{
             @include flex-column-center;
-            gap: 20px;
             font-family: sans-serif;
+            color: #444444;
 
             input , textarea{
                 padding: 5px 10px;
-                width: 50%;
-                min-width: 300px;
-                max-width: 450px;
+                width: 350px;
                 border: solid 2px #888888;
                 border-radius: 5px;
                 border-image: initial;
@@ -548,9 +613,8 @@
                 color: white;
                 border: none;
                 padding: 10px 20px;
-                min-width: 300px;
-                width: 50%;
-                max-width: 400px;
+                width: 350px;
+                // width: 50%;
                 font-size: 1.1rem;
                 border-radius: 5px;
                 border: 2px solid #eeeeee;
@@ -565,7 +629,7 @@
 
         @media screen and (max-width: 800px) {
             @include flex-column-center;
-            gap: 50px;
+            // gap: 50px;
             padding: 50px;
         }
     }

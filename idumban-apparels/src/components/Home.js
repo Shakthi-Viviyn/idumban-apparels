@@ -1,7 +1,5 @@
 import React , {useEffect} from "react";
 
-
-
 export default function Home(){
 
     const section1Styles = {
@@ -11,8 +9,9 @@ export default function Home(){
     }
 
     useEffect(() => {
-        function handleHover() {}
-    }, [])
+        document.title = 'Home | IDUMBAN APPARELS';
+    }, []);
+
 
     return (
         <div className="home-container navbar-offset">
@@ -100,7 +99,7 @@ export default function Home(){
                 <div className="content-container w-100">
                     <div className="card mb-3">
                         <img src="images/cards/cone.jpg" className="card-img-top" alt="..."/>
-                        <div className="card-body p-3 py-5">
+                        <div className="card-body">
                             <h3 className="card-title">Quality Raw Materials</h3>
                             <p className="card-text"> 
                                 Our commitment to sourcing the finest raw materials and subjecting them to rigourous quality tests guarantees our clients only receive best service in industry.
@@ -109,7 +108,7 @@ export default function Home(){
                     </div>
                     <div className="card mb-3">
                         <img src="images/cards/machine.jpg" className="card-img-top" alt="..."/>
-                        <div className="card-body p-3 py-5">
+                        <div className="card-body">
                             <h3 className="card-title">Talented Workforce</h3>
                             <p className="card-text">
                                 Talented workforce working on your orders means that you can rest easy and be guaranteed to get your needs met to the smallest details.
@@ -118,7 +117,7 @@ export default function Home(){
                     </div>
                     <div className="card mb-3">
                         <img src="images/cards/packing.jpg" className="card-img-top" alt="..."/>
-                        <div className="card-body p-3 py-5">
+                        <div className="card-body">
                             <h3 className="card-title">Flexible Production</h3>
                             <p className="card-text">
                                 We have flexible production capabilities to meet your diverse and specific needs, whether it be for high-volume runs or custom projects.

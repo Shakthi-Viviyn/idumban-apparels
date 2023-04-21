@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from 'react';
 
 export default function About() {
+
+    useEffect(() => {
+        document.title = 'About | IDUMBAN APPARELS';
+    }, []);
     
     const section1Styles = {
         backgroundImage: "url('/images/section1-about.jpg')",
