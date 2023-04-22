@@ -1,11 +1,10 @@
+const functions = require('firebase-functions')
 const express = require('express');
-const cors = require('cors');
 const nodeMailer = require('nodemailer');
 require('dotenv').config();
 const app = express();
-app.use(cors());
-app.use(express.json());
 
+app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
 
@@ -39,8 +38,5 @@ app.post("/api/contact", async (req, res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
-
+exports.app = functions.https.onRequest(app);
 

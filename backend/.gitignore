@@ -1,2 +1,4 @@
-.env
+/functions/.env
 /node_modules
+/build
+/functions/node_modules
